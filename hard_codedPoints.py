@@ -18,7 +18,7 @@ points2 = np.float32([
     [0,0],
     [width, 0],
     [0, height],
-    [width, height]
+    [width, height],
 ])
 
 matrix = cv2.getPerspectiveTransform(points, points2)
@@ -26,7 +26,6 @@ imgOutput = cv2.warpPerspective(img, matrix, (width, height))
 
 #for x in range(0, 4):
 #cv2.circle(img, (int(pts1[0][0]), int(pts1[0][1])), 10, (0,0,255), cv2.FILLED)
-
 
 
 for point in points:
